@@ -212,11 +212,13 @@ li {
 }
 @media screen and (max-width: 767px) {
   .menu-btn.is-open {
+    position: fixed;
     right: 20px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1343px) {
   .menu-btn.is-open {
+    position: fixed;
     right: 40px;
   }
 }
