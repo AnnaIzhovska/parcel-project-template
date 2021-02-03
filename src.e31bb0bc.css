@@ -2638,8 +2638,7 @@ li {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
-.modal-btn:hover,
-.modal-btn :focus {
+.modal-btn:hover, .modal-btn:focus {
   background-color: var(--primary-white-color);
   color: var(--accent-color);
   border: 2px solid var(--accent-color);
