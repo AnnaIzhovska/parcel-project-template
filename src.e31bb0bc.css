@@ -122,6 +122,10 @@ li {
   }
 }
 
+.page-header {
+  position: relative;
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -193,16 +197,26 @@ li {
   z-index: 100;
   background-color: transparent;
   cursor: pointer;
+  stroke: #000;
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-btn.is-open {
+  position: absolute;
+  stroke: #fff;
+}
+.menu-btn:hover, .menu-btn:focus {
+  stroke: var(--accent-color);
+}
+.menu-btn.is-open:hover, .menu-btn.is-open:focus {
+  stroke: var(--accent-color);
 }
 @media screen and (max-width: 767px) {
   .menu-btn.is-open {
-    position: fixed;
     right: 20px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1343px) {
   .menu-btn.is-open {
-    position: fixed;
     right: 40px;
   }
 }
@@ -255,6 +269,7 @@ li {
   text-align: center;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
   color: var(--accent-color);
 }
@@ -2631,6 +2646,7 @@ li {
 
 .backdrop {
   position: fixed;
+  z-index: 200;
   overflow-y: scroll;
   top: 0;
   left: 0;
