@@ -122,10 +122,6 @@ li {
   }
 }
 
-.page-header {
-  position: relative;
-}
-
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -285,8 +281,6 @@ li {
     position: fixed;
     top: 0;
     left: 0;
-    padding-left: 20px;
-    padding-right: 20px;
     overflow-y: scroll;
     width: 100vw;
     height: 100vh;
@@ -314,11 +308,6 @@ li {
     display: block;
     margin-left: 235px;
     margin-right: 40px;
-  }
-
-  .menu {
-    padding-left: 40px;
-    padding-right: 40px;
   }
 
   .nav-link {
@@ -367,6 +356,9 @@ li {
 
   .menu {
     padding: 0;
+  }
+
+  .menu-container {
     display: flex;
     align-items: center;
   }
@@ -404,6 +396,23 @@ li {
     padding-right: 60px;
   }
 }
+@media screen and (max-width: 767px) {
+  .menu-container {
+    margin: 0 auto;
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .menu-container {
+    width: 768px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
 .hero {
   position: relative;
   background-color: var(--primary-white-color);
@@ -2587,6 +2596,10 @@ li {
   line-height: 1.4;
   color: var(--title-text-color);
   background-color: var(--primary-background-color);
+}
+
+.body.modal-open {
+  overflow: hidden;
 }
 
 .modal-btn {
