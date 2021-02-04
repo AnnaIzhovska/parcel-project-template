@@ -129,6 +129,10 @@ li {
   align-items: center;
   padding-top: 30px;
 }
+.nav-container:hover .logo, .nav-container:focus .logo {
+  animation-name: HeartBeat;
+  animation-duration: 1000ms;
+}
 
 .logo-main-container {
   display: flex;
@@ -137,9 +141,15 @@ li {
   margin: 0;
 }
 
+.heartBeat {
+  animation-name: heartBeat;
+}
+
 .logo,
 .logo-dark {
   display: block;
+  animation-duration: 1.5s;
+  transition: transform 0.25s var(--timing-function);
 }
 
 .logo-dark {
@@ -267,6 +277,10 @@ li {
 .nav-btn :focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+  border-radius: 5px;
+  animation-name: pulse;
+  animation-duration: 1000ms;
+  box-shadow: 0px -5px 26px 5px rgba(224, 135, 17, 0.6);
   border-radius: 5px;
 }
 .nav-btn.header-btn {
@@ -455,11 +469,22 @@ li {
   display: flex;
   width: 216px;
   margin: 0 auto;
+  animation-duration: 1300ms;
+}
+.advantages-item:hover, .advantages-item:focus {
+  animation-name: pulse;
+  animation-duration: 1000ms;
 }
 @media screen and (max-width: 767px) {
   .advantages-item:not(:last-child) {
     margin-bottom: 30px;
   }
+}
+.advantages-item .animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+.advantages-item .animate__fadeInDown {
+  animation-name: fadeInDown;
 }
 .advantages-icon {
   position: absolute;
@@ -678,6 +703,10 @@ li {
   background-color: var(--primary-white-color);
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
+.problems-content:hover, .problems-content:focus {
+  box-shadow: 0px -5px 26px 5px rgba(224, 135, 17, 0.6);
+  border-radius: 5px;
+}
 @media screen and (min-width: 768px) {
   .problems-content {
     top: 188.5px;
@@ -852,6 +881,7 @@ li {
 .how-do-list-item:hover,
 .how-do-list-item:focus {
   background-color: var(--accent-color);
+  box-shadow: -37px -30px 59px -34px rgba(252, 153, 0, 0.6);
 }
 .how-do-list-item:hover .how-do-icon, .how-do-list-item:hover .how-do-icon,
 .how-do-list-item:focus .how-do-icon,
@@ -1048,6 +1078,10 @@ li {
   color: var(--primary-white-color);
   position: relative;
 }
+.program-list-semester:hover, .program-list-semester:focus {
+  animation-name: heartBeat;
+  animation-duration: 1000ms;
+}
 
 .method-list-text {
   font-family: Montserrat;
@@ -1126,6 +1160,10 @@ li {
   margin-left: auto;
   background: #FFFFFF;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+}
+.choose-wrapper:hover, .choose-wrapper:focus {
+  box-shadow: 0px -5px 26px 5px rgba(224, 135, 17, 0.6);
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1760,11 +1798,20 @@ li {
     height: 20px;
   }
 }
+.guarantee-container-list:hover, .guarantee-container-listfocus {
+  box-shadow: 0px -5px 26px 5px rgba(224, 135, 17, 0.6);
+  border-radius: 5px;
+}
+
 .logo-vk {
   width: 30px;
   height: 30px;
   margin-top: 26px;
+  animation-duration: 1000ms;
   cursor: pointer;
+}
+.logo-vk:hover, .logo-vk:focus {
+  animation-name: animate__flipInX;
 }
 @media screen and (max-width: 767px) {
   .logo-vk {
@@ -2006,6 +2053,10 @@ li {
   border: none;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
   margin: auto;
+}
+.slider:hover, .slider:focus {
+  box-shadow: 0px -5px 56px 5px rgba(224, 135, 17, 0.6);
+  border-radius: 5px;
 }
 @media screen and (max-width: 767px) {
   .slider {
@@ -2267,6 +2318,10 @@ li {
   color: var(--primary-white-color);
   margin-bottom: 20px;
 }
+.registration-form-input:hover, .registration-form-input:focus {
+  box-shadow: 0px -5px 96px 9px rgba(252, 122, 0, 0.6);
+  border-radius: 5px;
+}
 @media screen and (max-width: 767px) {
   .registration-form-input {
     padding-left: 28px;
@@ -2301,6 +2356,10 @@ li {
   background-color: var(--primary-white-color);
   color: var(--accent-color);
   border: 2px solid var(--accent-color);
+  border-radius: 5px;
+  animation-name: pulse;
+  animation-duration: 1000ms;
+  box-shadow: 0px -5px 56px 5px rgba(252, 122, 0, 0.6);
   border-radius: 5px;
 }
 
@@ -2454,6 +2513,15 @@ li {
   align-items: center;
   justify-content: center;
 }
+.contact-phone-container:hover, .contact-phone-containerfocus {
+  animation-name: tada;
+  color: var(--accent-color);
+  animation-duration: 2000ms;
+}
+.contact-phone-container:hover .phone-icon, .contact-phone-containerfocus .phone-icon {
+  animation-name: tada;
+  animation-duration: 2000ms;
+}
 
 .phone-icon {
   width: 20px;
@@ -2471,9 +2539,20 @@ li {
   letter-spacing: 0.08em;
   color: var(--title-text-color);
 }
+.contact-phone:hover, .contact-phonefocus {
+  color: var(--accent-color);
+  animation-duration: 1000ms;
+}
 
 .socials-link {
   display: block;
+  animation-duration: 1000ms;
+}
+.socials-link .heartBeat {
+  animation-name: heartBeat;
+}
+.socials-link:hover, .socials-link:focus {
+  animation-name: tada;
 }
 
 .socials-icon {
@@ -2644,6 +2723,10 @@ li {
   border: 2px solid var(--accent-color);
   border-radius: 5px;
   outline: none;
+  animation-name: pulse;
+  animation-duration: 1000ms;
+  box-shadow: 0px -5px 16px 5px rgba(252, 122, 0, 0.6);
+  border-radius: 5px;
 }
 @media screen and (min-width: 1344px) {
   .modal-btn {
@@ -2682,6 +2765,8 @@ li {
   padding: 10px;
   background-color: var(--primary-white-color);
   transition: opacity 250ms var(--cubic) 250ms;
+  box-shadow: 0px -5px 96px 9px rgba(252, 122, 0, 0.6);
+  border-radius: 10px;
 }
 .backdrop.is-hidden .modal-window {
   opacity: 0;
@@ -2736,9 +2821,11 @@ li {
   line-height: 1.571;
   letter-spacing: 0.08em;
 }
-.form-input:focus, .form-comment:focus {
+.form-input:focus, .form-input:hover, .form-comment:focus, .form-comment:hover {
   outline: none;
   border-color: var(--accent-color);
+  box-shadow: 0px -5px 96px -14px rgba(252, 122, 0, 0.6);
+  border-radius: 5px;
 }
 .form-comment {
   height: 100px;
